@@ -8,3 +8,5 @@ const UserSchema = new mongoose.Schema({
 const UserModel = mongoose.model("User", UserSchema);
 
 export default UserModel;
+//----------------------------------------------END CODE---------------------------------------------//
+//This is code for an experiment that did not work//

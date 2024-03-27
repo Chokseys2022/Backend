@@ -20,10 +20,4 @@ const blogSchema = new mongoose.Schema({
 
 export default mongoose.model("Blog", blogSchema);
 
-// schemas:
-//_id
-// title
-//subject or topic or content
-//author name
-//tags , eg: reflection, dance, family, nutrition, menatal and emotional health,
-//date created
+//----------------------------------------------END CODE---------------------------------------------//

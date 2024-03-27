@@ -8,3 +8,6 @@ const RegisterSchema = new mongoose.Schema({
 
 const RegisterModel = mongoose.model('register', RegisterSchema);
 export default RegisterModel;
+//----------------------------------------------END CODE---------------------------------------------//
+
+//This is code for an experiment that did not work//
