@@ -1,6 +1,6 @@
 # Blog Database
 
-This is a simple backend application for managing blogs.It uses Express.js and MongoDB with Mongoose. It provides endpoints for CRUD operations on blog posts.
+This is a simple backend application for managing blogs. It uses Express.js and MongoDB with Mongoose. It provides endpoints for CRUD operations on blog posts.
 
 ## Features
 
