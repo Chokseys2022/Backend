@@ -26,5 +26,5 @@ This is a simple backend application for managing blogs. It uses Express.js and 
 - PUT /blogData/:id: Update a blog post by ID.
 - DELETE /blogData/:id: Delete a blog post by ID.
 
-## Link to Frontend Application
+## Link to Frontend Application Repo on GitHub
 https://github.com/Chokseys2022/Frontend
