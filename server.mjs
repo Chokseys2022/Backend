@@ -4,8 +4,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import Blog from "./models/blogSchema.mjs";
 import blogData from "./utilities/data.js";
-import UserModel from './models/User.mjs';
-import cors from 'cors';
+import UserModel from "./models/User.mjs";
+import cors from "cors";
 
 //Configurations
 dotenv.config(); //load env variables from .env file
@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 3000; //define port
 //Middleware
 app.use(express.json()); //parse JSON
 app.use(express.urlencoded({ extended: true })); // parse URL-encoded bodies
-app.use(cors())
+app.use(cors());
 
 //---------------------
 //Creating all routes
@@ -52,7 +52,7 @@ app.post("/blogData", async (req, res) => {
     await newBlog.save(); //save new blog to db
     res.json(newBlog);
   } catch (err) {
-    throw console.error(err);
+    console.error(err);
     res.status(500).json({ msg: "Server Error" });
   }
 });
@@ -74,6 +74,7 @@ app.put("/blogData/:id", async (req, res) => {
     const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     }); // Update blog
+
     res.json(updatedBlog);
   } catch (err) {
     console.error(err);
@@ -82,13 +83,13 @@ app.put("/blogData/:id", async (req, res) => {
 });
 
 //DELETE route
-app.delete("/blogs/:id", async (req, res) => {
+app.delete("/:id", async (req, res) => {
   try {
     await Blog.findByIdAndDelete(req.params.id); //delete blog by id
 
     res.status(200).json({ msg: "Item in blogs schema deleted" });
   } catch (err) {
-    throw console.error(err);
+    console.error(err);
     res.status(500).json({ msg: "Server Error" });
   }
 });
